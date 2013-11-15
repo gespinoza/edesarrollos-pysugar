@@ -184,8 +184,11 @@ class Sugarcrm:
         def __init__(self, connection, module_list):
             self._connection = connection
             self._modules = {}
+            self._module_list = module_list['modules']
+            """
             self._module_list = [module['module_key'] for
                                  module in module_list['modules']]
+            """
 
         def __getitem__(self, item):
             # Retrieve the module information only if we haven't done
